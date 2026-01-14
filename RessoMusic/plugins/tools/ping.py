@@ -1,10 +1,11 @@
 from datetime import datetime
+import random
 
 from pyrogram import filters
 from pyrogram.types import Message
 
 from RessoMusic import app
-from RessoMusic.core.call import AMBOTOP
+from RessoMusic.core.call import AMBOTOP 
 from RessoMusic.utils import bot_sys_stats
 from RessoMusic.utils.decorators.language import language
 from RessoMusic.utils.inline import supp_markup
@@ -16,10 +17,10 @@ from config import BANNED_USERS, PING_IMG_URL
 async def ping_com(client, message: Message, _):
     start = datetime.now()
     response = await message.reply_photo(
-        photo=PING_IMG_URL,
+        photo=random.choice(PING_IMG_URL),
         caption=_["ping_1"].format(app.mention),
     )
-    pytgping = await AMBOTOP.ping()
+    pytgping = await Istkhar.ping()
     UP, CPU, RAM, DISK = await bot_sys_stats()
     resp = (datetime.now() - start).microseconds / 1000
     await response.edit_text(
