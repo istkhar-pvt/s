@@ -35,15 +35,15 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY","HRKU-76a2723e-ff3f-4191-b17f-d5a68b882
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/istkhar-pvt/muun",
+    "https://github.com/istkhar-pvt/s",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv(
-    "GIT_TOKEN", "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"
+    "GIT_TOKEN", "ghp_W7tfL1fz03kLmhttps://github.com/istkhar-pvt/s"
 )  # Fill this variable if your upstream repository is private
 
 SUPPORT_CHANNEL = getenv("SUPPORT_CHAT", "https://t.me/IamIstkhar")
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/+xfr6-ZOTaZVmODU1")
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/+0oekeamatNtmNjll")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
@@ -120,6 +120,7 @@ if SUPPORT_GROUP:
         raise SystemExit(
             "[ERROR] - Your SUPPORT_GROUP url is wrong. Please ensure that it starts with https://"
         )
+
 
 
 
