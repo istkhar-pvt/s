@@ -1,3 +1,4 @@
+import time
 import random
 
 from pyrogram import filters
@@ -6,6 +7,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
 from youtubesearchpython.__future__ import VideosSearch
 
 import config
+from config import START_IMG_URL
 from RessoMusic import app
 from RessoMusic.misc import _boot_
 from RessoMusic.plugins.sudo.sudoers import sudoers_list
@@ -17,14 +19,11 @@ from RessoMusic.utils.database import (
     is_banned_user,
     is_on_off,
 )
-from RessoMusic.utils import bot_sys_stats
 from RessoMusic.utils.decorators.language import LanguageStart
 from RessoMusic.utils.formatters import get_readable_time
 from RessoMusic.utils.inline import help_pannel, private_panel, start_panel
 from config import BANNED_USERS
 from strings import get_string
-from RessoMusic.misc import SUDOERS
-
 
 
 @app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
